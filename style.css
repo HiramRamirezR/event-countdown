@@ -1,3 +1,19 @@
 #rocket {
   width: 100px;
 }
+
+#display {
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50vw;
+}
+
+#display div {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
