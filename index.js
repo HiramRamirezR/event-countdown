@@ -1,10 +1,8 @@
 const display = document.getElementById('display')
 const rocket = document.getElementById('rocket')
 
-
-
 // *********** You can use .toString to get a format like this: Fri Nov 25 2022 13:40:27
-// const liftOffTime = new Date('December 31 2022 18:00').toString()
+// const liftOffTime = new Date('December 31 2022 00:00').toString()
 // const currentTime = new Date().toString()
 
 const displayDays = document.querySelector('.days')
@@ -14,7 +12,7 @@ const displaySeconds = document.querySelector('.seconds')
 
 
 function paint() {
-  const liftOffTime = new Date('December 31 2022 10:00')
+  const liftOffTime = new Date('November 30 2022 08:00')
   const currentTime = new Date()
 
   let diff = liftOffTime - currentTime
@@ -34,6 +32,9 @@ function paint() {
   displaySeconds.textContent = seconds
 
   // console.log(days, hours, minutes, seconds);
+  if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
+    alert('Lift off')
+  }
 }
 
 setInterval(() => {

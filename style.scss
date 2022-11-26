@@ -1,14 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
 #rocket {
   width: 100px;
+  margin-bottom: 20px;
 }
 
 #display {
   background-color: black;
   color: white;
   display: flex;
-  justify-content: space-around;
-  width: 50vw;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40vw;
+  min-width: 300px;
+  height: 75px;
+  border-radius: 7px;
   div {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(53, 53, 53);
+    width: 60px;
+    height: 60px;
+    border-radius: 7px;
+
+    p {
+      margin: 5px;
+    }
   }
 }
