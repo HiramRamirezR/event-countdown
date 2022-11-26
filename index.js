@@ -12,7 +12,7 @@ const displaySeconds = document.querySelector('.seconds')
 
 
 function paint() {
-  const liftOffTime = new Date('November 30 2022 08:00')
+  const liftOffTime = new Date('November 26 2022 16:55')
   const currentTime = new Date()
 
   let diff = liftOffTime - currentTime
@@ -32,8 +32,12 @@ function paint() {
   displaySeconds.textContent = seconds
 
   // console.log(days, hours, minutes, seconds);
-  if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
-    alert('Lift off')
+  if (days == 0 && hours == 0 && minutes == 0 && seconds == 0 || days < 0) {
+    displayDays.remove()
+    displayHours.remove()
+    displayMinutes.remove()
+    displaySeconds.remove()
+    rocket.classList.add('fly')
   }
 }
 

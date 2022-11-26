@@ -13,11 +13,6 @@
   height: 100vh;
 }
 
-#rocket {
-  width: 100px;
-  margin-bottom: 20px;
-}
-
 #display {
   background-color: black;
   color: white;
@@ -42,4 +37,20 @@
       margin: 5px;
     }
   }
+}
+
+#rocket {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.fly {
+  animation: fly 1s 1;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+
+@keyframes fly {
+  from { bottom: 0; opacity: 100%;}
+  to   { bottom: 250px; opacity: 0%}
 }
