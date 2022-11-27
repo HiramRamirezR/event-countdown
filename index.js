@@ -1,10 +1,17 @@
 const display = document.getElementById('display')
 const rocket = document.getElementById('rocket')
 const fire = document.querySelector('.fire')
+const date = document.querySelector('#date')
+const time = document.querySelector('#time')
+const btn = document.querySelector('.btn')
 
 // *********** You can use .toString to get a format like this: Fri Nov 25 2022 13:40:27
 // const liftOffTime = new Date('December 31 2022 00:00').toString()
 // const currentTime = new Date().toString()
+
+btn.addEventListener('click', () => {
+  start()
+})
 
 const displayDays = document.querySelector('.days')
 const displayHours = document.querySelector('.hours')
@@ -13,7 +20,8 @@ const displaySeconds = document.querySelector('.seconds')
 
 
 function paint() {
-  const liftOffTime = new Date('November 26 2022 20:22')
+  // const liftOffTime = new Date('November 26 2022 20:54') // Meter la fecha a mano
+  const liftOffTime = new Date(`${date.value} ${time.value}`) // Meter la fecha con inputs
   const currentTime = new Date()
 
   let diff = liftOffTime - currentTime
@@ -34,16 +42,15 @@ function paint() {
 
   // console.log(days, hours, minutes, seconds);
   if (days == 0 && hours == 0 && minutes == 0 && seconds == 0 || days < 0) {
-    displayDays.remove()
-    displayHours.remove()
-    displayMinutes.remove()
-    displaySeconds.remove()
-    rocket.classList.add('fly')
+    display.remove()
     fire.classList.remove('fire1')
     fire.classList.add('fire2')
+    rocket.classList.add('fly')
   }
 }
 
-setInterval(() => {
-  paint()
-}, 1000);
+function start() {
+  setInterval(() => {
+    paint()
+  }, 1000);
+}
