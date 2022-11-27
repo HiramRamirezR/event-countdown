@@ -110,13 +110,13 @@
   display: '';
   width: 100px;
   transform: rotate(180deg);
-  animation: fly 1s 1;
+  animation: fly 2s 1;
   animation-fill-mode: forwards;
   position: relative;
 }
 
 .fly {
-  animation: fly 1s 1;
+  animation: fly 2s 1;
   animation-fill-mode: forwards;
   position: relative;
 }

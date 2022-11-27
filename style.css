@@ -150,16 +150,16 @@
   width: 100px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  -webkit-animation: fly 1s 1;
-          animation: fly 1s 1;
+  -webkit-animation: fly 2s 1;
+          animation: fly 2s 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   position: relative;
 }
 
 .fly {
-  -webkit-animation: fly 1s 1;
-          animation: fly 1s 1;
+  -webkit-animation: fly 2s 1;
+          animation: fly 2s 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   position: relative;
