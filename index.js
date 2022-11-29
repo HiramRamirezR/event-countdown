@@ -4,6 +4,7 @@ const fire = document.querySelector('.fire')
 const date = document.querySelector('#date')
 const time = document.querySelector('#time')
 const btn = document.querySelector('.btn')
+const audio = new Audio('audio/rocket.mp3');
 
 // *********** You can use .toString to get a format like this: Fri Nov 25 2022 13:40:27
 // const liftOffTime = new Date('December 31 2022 00:00').toString()
@@ -40,9 +41,9 @@ function paint() {
   displayMinutes.textContent = minutes
   displaySeconds.textContent = seconds
 
-  // console.log(days, hours, minutes, seconds);
   if (days == 0 && hours == 0 && minutes == 0 && seconds == 0 || days < 0) {
     display.remove()
+    audio.play()
     fire.classList.remove('fire1')
     fire.classList.add('fire2')
     rocket.classList.add('fly')
