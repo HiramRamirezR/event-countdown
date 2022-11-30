@@ -44,6 +44,7 @@ function paint() {
   if (days == 0 && hours == 0 && minutes == 0 && seconds == 0 || days < 0) {
     display.remove()
     audio.play()
+
     fire.classList.remove('fire1')
     fire.classList.add('fire2')
     rocket.classList.add('fly')
