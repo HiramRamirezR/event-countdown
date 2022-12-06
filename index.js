@@ -24,6 +24,9 @@ function paint() {
   // const liftOffTime = new Date('November 26 2022 20:54') // Meter la fecha a mano
   const liftOffTime = new Date(`${date.value} ${time.value}`) // Meter la fecha con inputs
   const currentTime = new Date()
+  if (date.value === '' && time.value === '') {
+    liftOffTime = new Date('November 26 2023 20:54')
+  }
 
   let diff = liftOffTime - currentTime
   const days = Math.floor(diff / (1000*60*60*24))
